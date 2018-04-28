@@ -2,8 +2,8 @@
 Python simple GUI Apps using PyQt4
 
 <p align="center">
-  <img src="temperature_unit_converter.jpg" width=550 height=380>
-  <img src="simple_calculator.jpg" width=250 height=380>
+  <img src="temperature_unit_converter.jpg" width=550 height=370>
+  <img src="simple_calculator.jpg" width=250 height=370>
  </p> 
  
  
