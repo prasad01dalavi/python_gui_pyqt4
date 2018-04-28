@@ -1,14 +1,12 @@
 # Python GUI 
 Python simple GUI Apps using PyQt4
 
-<p align="left">
+<p align="center">
   <img src="temperature_unit_converter.jpg" width=550 height=380>
+  <img src="simple_calculator.jpg" width=250 height=380>
  </p> 
  
- <p align="right">
-  <img src="simple_calculator.jpg" width=200 height=380>
- </p> 
-
+ 
 ## Installation:
 
 PyQt4 (Python2 x64):
