@@ -9,14 +9,13 @@ class Window(QtGui.QMainWindow):
         self.setWindowTitle('Python App')
         self.setWindowIcon(QtGui.QIcon('python.png'))
 
-        self.toolbar_setting()
+        self.tool_bar_setting()
         self.dropdown_styles()
-        self.font_widget()
+        self.color_picker_widget()
         
         self.show()
-    # ----------------------------------------------------------------------- #
 
-    def toolbar_setting(self):
+    def tool_bar_setting(self):
         self.toolBar = self.addToolBar('Extraction')
     # ----------------------------------------------------------------------- #
 
@@ -41,19 +40,22 @@ class Window(QtGui.QMainWindow):
         QtGui.QApplication.setStyle(QtGui.QStyleFactory.create(text))
     # ----------------------------------------------------------------------- #
 
-    def font_widget(self):
-        font_choice = QtGui.QAction('Font', self)
-        # Name for the font menu is given as Font
+    def color_picker_widget (self):
+        color = QtGui.QColor(255, 255, 255)
+        # font color set to Black....!!!??? not happy with this
+        font_color = QtGui.QAction('Font Background Color', self)
+        font_color.triggered.connect(self.color_picker)
+        self.toolBar.addAction(font_color)
+        # add font_color object to the toolbar
 
-        font_choice.triggered.connect(self.font_choice)
-        # When click on font; go to font_choice method
+        cal = QtGui.QCalendarWidget(self)
+        cal.move(280, 135)           # 280 from left,135 from up
+        cal.resize(140, 140)         # base X height
 
-        self.toolBar.addAction(font_choice)
-        
-    def font_choice(self):
-        font, valid = QtGui.QFontDialog.getFont()
-        if valid:
-            self.styleChoice.setFont(font)
+    def color_picker(self):
+        color = QtGui.QColorDialog.getColor()
+        self.styleChoice.setStyleSheet('QWidget { background-color:%s}' %
+                                       color.name())
 
            
 def run_app():

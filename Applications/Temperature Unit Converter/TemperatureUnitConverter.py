@@ -1,6 +1,7 @@
 import sys
 from PyQt4 import QtGui,QtCore             
 
+
 class Window(QtGui.QMainWindow):           
 
     def __init__(self):                    
@@ -38,10 +39,10 @@ class Window(QtGui.QMainWindow):
 #--------------------End of Text box Setting---------------------------#
 
 #-------------------------Label Setting--------------------------------#
-        self.celsius = QtGui.QLabel('° C',self)    #Give a Label 
+        self.celsius = QtGui.QLabel(' C',self)    #Give a Label
         self.celsius.move(135,130)                 #Position of Label
 
-        self.fahrenheit = QtGui.QLabel('° F',self) #Give a Label
+        self.fahrenheit = QtGui.QLabel(' F',self) #Give a Label
         self.fahrenheit.move(435,130)              #Position of Label
 #---------------------End of Label Setting-----------------------------#
  

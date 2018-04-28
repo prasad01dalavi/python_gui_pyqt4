@@ -16,6 +16,8 @@ class Main(QtGui.QMainWindow):
  
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
+        
+ 
         self.initUI()
  
     def initUI(self):
@@ -283,8 +285,9 @@ class Main(QtGui.QMainWindow):
         self.line.setText(str(n))
  
 def main():
-    app = QtGui.QApplication(sys.argv)
+    app = QtGui.QApplication(sys.argv)       
     main= Main()
+    main.setWindowTitle('Calculator');
     main.show()
  
     sys.exit(app.exec_())
